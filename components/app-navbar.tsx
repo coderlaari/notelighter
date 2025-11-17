@@ -4,7 +4,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 
 export function Navbar() {
   return (
-    <nav className="bg-gray-800 h-12 w-full flex gap-3 p-1.5">
+    <nav className="bg-gray-800 h-15 w-full flex gap-3 p-1.5">
       <SignedIn>
         <Button>
           <Link href="/home">Home</Link>
@@ -12,7 +12,9 @@ export function Navbar() {
         <Button>
           <Link href="/notes">Notes</Link>
         </Button>
-        <UserButton />
+        <div className="ml-auto">
+          <UserButton />
+        </div>
       </SignedIn>
     </nav>
   );
